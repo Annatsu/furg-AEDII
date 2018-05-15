@@ -89,13 +89,16 @@ namespace adt {
             int size();
 
 
+        public:
+
+            // As an error flag, 0 was chosen because it's implicitly converted to false in a condition.
+            static const int error_symbol = 0;
+
+
         private:
 
             // arrStart and arrEnd will be set to this whenever the list is empty.
             static const char empty_list_limit = -1;
-
-            // As an error flag, 0 was chosen because it's implicitly converted to false in a condition.
-            static const int error_symbol = 0;
 
             // We want the starting position for the arrStart to be at the middle of the underlying array,
             // as this will provide us with faster manipulation of elements when inserting at the back and
