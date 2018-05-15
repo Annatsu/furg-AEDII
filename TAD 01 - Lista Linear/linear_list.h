@@ -28,6 +28,7 @@ namespace adt {
              */
             LinearList();
 
+
             /**
              * @brief   Inserts an element at a given position in the list.
              * 
@@ -78,15 +79,33 @@ namespace adt {
             /**
              * @brief   The number of elements inside the list.
              * 
-             * @return int
+             * @return  int
              */
             int size();
 
-        
+
         private:
 
+            // An integer that points to the start of the array.
+            int arrStart = -1;
 
-            int storage[];
+            // An integer that points to the end of the array.
+            int arrEnd = -1;
+
+            // Keeps track of the array length.
+            int length = 0;
+
+            // The array where the list elements will be inserted at.
+            int storage[10];
+
+        private:
+
+            /**
+             * @brief   Recalculates the length member variable.
+             * 
+             * @return  void
+             */
+            void determineLength();
 
     };
 
