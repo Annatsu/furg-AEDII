@@ -39,7 +39,7 @@ namespace adt {
             arrStart != (int) LinearList::empty_list_limit &&
             arrEnd != (int) LinearList::empty_list_limit
         )
-            ? arrEnd - arrStart
+            ? arrEnd - arrStart + 1
             : 0;
     }
 
