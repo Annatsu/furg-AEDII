@@ -1,10 +1,10 @@
 /** 
- *  @file    linear_list.h
- *  @author  Brendon Pagano (annatsu)
- *  @date    05/15/2018
- *  @version 1.0
+ *  @file       linear_list.h
+ *  @author     Brendon Pagano (annatsu)
+ *  @date       05/15/2018
+ *  @version    1.0
  *  
- *  @brief A Linear List ADT header file.
+ *  @brief      A Linear List ADT header file.
  *
  */
 
