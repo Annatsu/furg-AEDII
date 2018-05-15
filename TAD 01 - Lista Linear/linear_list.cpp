@@ -15,6 +15,12 @@ namespace adt {
 
     LinearList::LinearList() {
 
+    char LinearList::clear() {
+        // Because of bound checking on every get, we can just reset the limit pointers.
+        // This ensures a faster clear algorithm.
+        arrStart = LinearList::empty_list_limit;
+        arrEnd = LinearList::empty_list_limit;
+        determineLength();
     }
 
 
