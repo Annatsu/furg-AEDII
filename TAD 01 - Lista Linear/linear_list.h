@@ -11,6 +11,10 @@
 #pragma once
 
 
+#define LINEAR_LIST_CAPACITY 10
+
+
+
 namespace adt {
 
     /**
@@ -116,3 +120,7 @@ namespace adt {
     };
 
 }
+
+
+
+#undef LINEAR_LIST_CAPACITY 10
