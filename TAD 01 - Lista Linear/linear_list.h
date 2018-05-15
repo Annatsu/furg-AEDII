@@ -105,6 +105,9 @@ namespace adt {
             // at the front.
             static const int arr_start_position = LINEAR_LIST_CAPACITY / 2;
 
+            // The max number of items the list can possess.
+            static const int arr_max_capacity = LINEAR_LIST_CAPACITY;
+
 
         private:
 
