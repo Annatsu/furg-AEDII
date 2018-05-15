@@ -18,8 +18,15 @@ namespace adt {
     }
 
 
-    int LinearList::back() {
 
+    // Private Methods
+
+    void LinearList::determineLength() {
+        // When the limit pointers are both set to -1, this means that the
+        // list is empty, or it has been cleared.
+        length = (arrStart != -1 && arrEnd != -1)
+            ? arrEnd - arrStart
+            : 0;
     }
 
 }
