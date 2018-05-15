@@ -18,8 +18,8 @@ namespace adt {
     char LinearList::clear() {
         // Because of bound checking on every get, we can just reset the limit pointers.
         // This ensures a faster clear algorithm.
-        arrStart = LinearList::empty_list_limit;
-        arrEnd = LinearList::empty_list_limit;
+        arrStart = (int) LinearList::empty_list_limit;
+        arrEnd = (int) LinearList::empty_list_limit;
         determineLength();
     }
 
@@ -36,8 +36,8 @@ namespace adt {
         // When the limit pointers are both set to -1, this means that the
         // list is empty, or it has been cleared.
         length = (
-            arrStart != LinearList::empty_list_limit &&
-            arrEnd != LinearList::empty_list_limit
+            arrStart != (int) LinearList::empty_list_limit &&
+            arrEnd != (int) LinearList::empty_list_limit
         )
             ? arrEnd - arrStart
             : 0;
