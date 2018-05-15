@@ -13,7 +13,52 @@
 
 namespace adt {
 
-    LinearList::LinearList() {
+    // Constructors
+
+    LinearList::LinearList() {}
+
+
+
+    // Public Methods
+
+    char LinearList::insertAt(int pos, int item) {
+        // Bound checking for errors.
+        if (
+            (pos != 1 && length == 0) ||
+            (pos > length + 1) ||
+            (pos < 1) ||
+            (length >= LinearList::arr_max_capacity)
+        )
+            return LinearList::error_symbol;
+
+
+        // Declare the insertion point, to be modified below.
+        int insertionPoint = -1;
+
+
+        // If the length is 0, then there's no item inserted, and it must behave a little differently.
+        if (length == 0) {
+            // Set the underlying array limits.
+            arrStart = LinearList::arr_start_position;
+            arrEnd = LinearList::arr_start_position;
+
+            insertionPoint = LinearList::arr_start_position;
+        } else if (pos <= length) {
+
+        } else {
+            // In this case, the insertion will occur at the end, so we just
+            // increment the end limit pointer and insert the item there.
+            insertionPoint = ++arrEnd;
+        }
+
+
+        // Determines the new list length.
+        determineLength();
+
+        // Insert the item on the insertion point.
+        storage[insertionPoint] = item;
+    }
+
 
     char LinearList::clear() {
         // Because of bound checking on every get, we can just reset the limit pointers.
