@@ -1,3 +1,13 @@
+/** 
+ *  @file    linear_list.h
+ *  @author  Brendon Pagano (annatsu)
+ *  @date    05/15/2018
+ *  @version 1.0
+ *  
+ *  @brief A Linear List ADT header file.
+ *
+ */
+
 #pragma once
 
 
@@ -71,6 +81,12 @@ namespace adt {
              * @return int
              */
             int size();
+
+        
+        private:
+
+
+            int storage[];
 
     };
 
