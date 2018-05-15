@@ -37,9 +37,10 @@ namespace adt {
              * @brief   Inserts an element at a given position in the list.
              * 
              * @param   pos an integer representing the location inside the list to place that element
-             * @return  1 if the element was inserted, 0 otherwise.
+             * @param   item the number to insert at the position
+             * @return  1 if the element was inserted, 0 otherwise
              */
-            char insertAt(int pos);
+            char insertAt(int pos, int item);
 
 
             /**
@@ -90,7 +91,16 @@ namespace adt {
 
         private:
 
+            // arrStart and arrEnd will be set to this whenever the list is empty.
             static const char empty_list_limit = -1;
+
+            // As an error flag, 0 was chosen because it's implicitly converted to false in a condition.
+            static const int error_symbol = 0;
+
+            // We want the starting position for the arrStart to be at the middle of the underlying array,
+            // as this will provide us with faster manipulation of elements when inserting at the back and
+            // at the front.
+            static const int arr_start_position = LINEAR_LIST_CAPACITY / 2;
 
 
         private:
@@ -105,7 +115,7 @@ namespace adt {
             int length = 0;
 
             // The array where the list elements will be inserted at.
-            int storage[10];
+            int storage[LINEAR_LIST_CAPACITY];
 
 
         private:
