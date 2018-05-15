@@ -133,4 +133,4 @@ namespace adt {
 
 
 
-#undef LINEAR_LIST_CAPACITY 10
+#undef LINEAR_LIST_CAPACITY
