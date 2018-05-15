@@ -86,6 +86,11 @@ namespace adt {
 
         private:
 
+            static const char empty_list_limit = -1;
+
+
+        private:
+
             // An integer that points to the start of the array.
             int arrStart = -1;
 
@@ -97,6 +102,7 @@ namespace adt {
 
             // The array where the list elements will be inserted at.
             int storage[10];
+
 
         private:
 
