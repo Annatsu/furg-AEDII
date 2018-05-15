@@ -24,6 +24,11 @@ namespace adt {
     }
 
 
+    int LinearList::size() {
+        return length;
+    }
+
+
 
     // Private Methods
 
