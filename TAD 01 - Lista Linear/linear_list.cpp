@@ -62,6 +62,16 @@ namespace adt {
     }
 
 
+    int LinearList::front() {
+        return getItem(1);
+    }
+
+
+    int LinearList::back() {
+        return getItem(length);
+    }
+
+
     int LinearList::getItem(int pos) {
         // If there's an error upon boundary checking, return an error flag.
         if (pos < 1 || pos > length + 1)
