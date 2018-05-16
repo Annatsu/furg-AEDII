@@ -136,9 +136,10 @@ namespace adt {
             /**
              * @brief   Creates a 'hole' inside the storage array, in order to insert a new element inside it.
              * 
+             * @param   pos the position to create a 'hole' at
              * @return  int
              */
-            int createInsertionPointAt(int index);
+            int createInsertionPointAt(int pos);
 
     };
 

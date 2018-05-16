@@ -10,6 +10,8 @@
 
 #include "linear_list.h"
 
+#include <cmath>
+
 
 namespace adt {
 
@@ -107,6 +109,49 @@ namespace adt {
         )
             ? arrEnd - arrStart + 1
             : 0;
+    }
+
+
+    int LinearList::createInsertionPointAt(int pos) {
+        // Where the for loop will start.
+        int start;
+
+        // The number of operations needed to reallocate the array.
+        int operations;
+
+        // Depending on the location of the pos param, this could be 1 or -1.
+        int step;
+
+
+        // Check if the position is at the middle or at the left half of the array.
+        if (pos <= (int) ceil(length / 2)) {
+
+            // If there's no space to the left, return an error.
+            if (arrStart - 1 < 0)
+                return LinearList::error_symbol;
+
+            start = arrStart--;
+            operations = pos;
+            step = -1;
+        } else {
+
+            // If there's no space to the right, return an error.
+            if (arrEnd + 1 >= LinearList::arr_max_capacity)
+                return LinearList::error_symbol;
+
+            start = arrEnd++;
+            operations = length - pos + 1;
+            step = 1;
+        }
+
+
+        // Loop through the array operation number of times, rearranging it's values.
+        for (int i = 0; i < operations; i++)
+            storage[start + (i * -step) + step] = storage[start + (i * -step)];
+
+
+        // Returns 1 to say everything's fine.
+        return 1;
     }
 
 }
