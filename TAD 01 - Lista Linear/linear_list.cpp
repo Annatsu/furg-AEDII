@@ -46,7 +46,10 @@ namespace adt {
 
             insertionPoint = LinearList::arr_start_position;
         } else if (pos <= length) {
+            if (!createInsertionPointAt(pos))
+                return LinearList::error_symbol;
 
+            insertionPoint = arrStart + pos - 1;
         } else {
             // In this case, the insertion will occur at the end, so we just
             // increment the end limit pointer and insert the item there.
@@ -89,6 +92,8 @@ namespace adt {
         arrStart = (int) LinearList::empty_list_limit;
         arrEnd = (int) LinearList::empty_list_limit;
         determineLength();
+
+        return 1;
     }
 
 
