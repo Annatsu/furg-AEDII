@@ -23,7 +23,7 @@ namespace adt {
 
     // Public Methods
 
-    char LinearList::insertAt(int pos, int item) {
+    int LinearList::insertAt(int pos, int item) {
         // Bound checking for errors.
         if (
             (pos != 1 && length == 0) ||
@@ -83,7 +83,7 @@ namespace adt {
     }
 
 
-    char LinearList::clear() {
+    int LinearList::clear() {
         // Because of bound checking on every get, we can just reset the limit pointers.
         // This ensures a faster clear algorithm.
         arrStart = (int) LinearList::empty_list_limit;

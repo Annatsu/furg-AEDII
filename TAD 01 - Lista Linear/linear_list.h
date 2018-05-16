@@ -40,7 +40,7 @@ namespace adt {
              * @param   item the number to insert at the position
              * @return  1 if the element was inserted, 0 otherwise
              */
-            char insertAt(int pos, int item);
+            int insertAt(int pos, int item);
 
 
             /**
@@ -56,7 +56,7 @@ namespace adt {
              * 
              * @return  1 if the list was successfully cleared, 0 otherwise.
              */
-            char clear();
+            int clear();
 
 
             /**
