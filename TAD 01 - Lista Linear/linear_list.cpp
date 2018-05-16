@@ -1,5 +1,5 @@
 /** 
- *  @file       linear_list.h
+ *  @file       linear_list.cpp
  *  @author     Brendon Pagano (annatsu)
  *  @date       05/15/2018
  *  @version    1.0
