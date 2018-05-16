@@ -133,6 +133,13 @@ namespace adt {
              */
             void determineLength();
 
+            /**
+             * @brief   Creates a 'hole' inside the storage array, in order to insert a new element inside it.
+             * 
+             * @return  int
+             */
+            int createInsertionPointAt(int index);
+
     };
 
 }
