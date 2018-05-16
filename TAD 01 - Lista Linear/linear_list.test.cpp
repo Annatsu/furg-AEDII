@@ -22,4 +22,11 @@ int main() {
     for (int i = 1; i <= list.size(); i++)
         std::cout << list.getItem(i) << std::endl;
 
+    
+    // Get list's first element
+    std::cout << "First element: " << list.front() << std::endl;
+
+    // Get list's last element
+    std::cout << "Last element: " << list.back() << std::endl;
+
 }
