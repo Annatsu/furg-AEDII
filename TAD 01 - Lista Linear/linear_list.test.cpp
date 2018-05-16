@@ -9,10 +9,17 @@ int main() {
     adt::LinearList list;
 
 
-    // Insert an item at the beginning of the list.
-    list.insertAt(1, 12);
+    // Insert five items at the end of the list.
+    for (int i = 0; i < 5; i++)
+        list.insertAt(i + 1, i);
 
-    // Check if the size is 1
-    std::cout << list.size() << std::endl;
+    // Check if the size is 5
+    std::cout << "List size: " << list.size() << std::endl;
+
+
+
+    // Loop through the list. Should print: range(0, 4)
+    for (int i = 1; i <= list.size(); i++)
+        std::cout << list.getItem(i) << std::endl;
 
 }
