@@ -57,6 +57,15 @@ namespace adt {
 
         // Insert the item on the insertion point.
         storage[insertionPoint] = item;
+
+
+
+    int LinearList::getItem(int pos) {
+        // If there's an error upon boundary checking, return an error flag.
+        if (pos < 1 || pos > length + 1)
+            return LinearList::error_symbol;
+        
+        return storage[arrStart + pos - 1];
     }
 
 
