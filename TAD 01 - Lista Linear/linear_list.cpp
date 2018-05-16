@@ -58,6 +58,8 @@ namespace adt {
         // Insert the item on the insertion point.
         storage[insertionPoint] = item;
 
+        return 1;
+    }
 
 
     int LinearList::getItem(int pos) {
