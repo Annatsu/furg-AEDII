@@ -5,19 +5,13 @@
 
 
 LinkedList* __LinkedList_create() {
-    return NULL;
+    return (LinkedList*) malloc(sizeof(LinkedList));
 }
 
 
 void __LinkedList_insert(LinkedList* list, int info) {
     if (list == NULL) {
-        // list = (LinkedList*) malloc(sizeof(LinkedList));
-        list->info = info;
-        list->next = __LinkedList_create();
-
-        printf("Valor: %d\n", list->info);
-        printf("Next: %d\n", list->next);
-        printf("Ponteiro: %d\n", list);
+        
     } else
         __LinkedList_insert(list->next, info);
 }
@@ -45,7 +39,7 @@ int main() {
 
     __LinkedList_insert(list, 3);
 
-    printf("valor2: %d\n", list);
+    //printf("valor2: %d\n", list);
 
     //printf("valor: %d", list->info);
 
