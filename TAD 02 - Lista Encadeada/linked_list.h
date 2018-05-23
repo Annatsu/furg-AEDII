@@ -10,7 +10,7 @@ struct _LinkedList {
 
 LinkedList* __LinkedList_create();
 
-LinkedList* __LinkedList_insert(LinkedList*, int);
+void __LinkedList_insert(LinkedList*, int);
 LinkedList* __LinkedList_insertAt(LinkedList*, int, int);
 
 LinkedList* front(LinkedList*);
