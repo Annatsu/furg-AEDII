@@ -87,6 +87,25 @@ namespace adt {
              */
             int size();
 
+
+        public:
+
+            /**
+             * @brief   Return value of any method that fails.
+             * 
+             * As an error flag, 0 was chosen because it's implicitly converted to false in a condition.
+             */
+            static const int ERROR = 0;
+
+
+        private:
+
+            // The first node of the linked list, will hold a reference to every node after it.
+            Node list;
+
+            // An integer to keep track of the list's size without having to go through the list every time.
+            int size;
+
     };
 
 }
