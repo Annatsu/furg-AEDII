@@ -104,7 +104,7 @@ namespace adt {
             Node list;
 
             // An integer to keep track of the list's size without having to go through the list every time.
-            int size;
+            int length;
 
     };
 

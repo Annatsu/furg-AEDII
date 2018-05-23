@@ -18,8 +18,8 @@ namespace adt {
     // Constructors
 
     LinkedList::LinkedList() :
-        list({ 3, nullptr }),
-        size(0) {}
+        list({ 0, nullptr }),
+        length(0) {}
 
 
     // Public methods
