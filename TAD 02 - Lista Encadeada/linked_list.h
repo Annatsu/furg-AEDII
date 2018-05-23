@@ -1,12 +1,19 @@
 #pragma once
 
 
-typedef struct {
+typedef struct _LinkedList LinkedList;
+struct _LinkedList {
     int info;
     LinkedList* next;
-} LinkedList;
+};
 
 
-void __LinkedList_create();
+LinkedList* __LinkedList_create();
 
-int __LinkedList_size();
+LinkedList* __LinkedList_insert(LinkedList*, int);
+LinkedList* __LinkedList_insertAt(LinkedList*, int, int);
+
+LinkedList* front(LinkedList*);
+LinkedList* back(LinkedList*);
+
+int __LinkedList_size(LinkedList*);
